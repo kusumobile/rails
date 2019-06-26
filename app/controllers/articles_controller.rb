@@ -3,6 +3,10 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
+  def index
+    @articles = Article.all  #Be careful for purual variable name
+  end
+
   def edit
     @article = Article.find(params[:id])
   end
